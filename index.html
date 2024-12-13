@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-l Mayer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @font-face {
+        font-family : Punktype;
+        src: url(assets/font/Punktype.ttf);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #2E3A40;
+            color: #E94E77;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family : Punktype;
+        }
+        
+        h1 {
+            font-size: 94px;
+        }
+        h2{
+            font-size: 58px;
+        }
+        h3{
+            font-size: 36px;
+        }
+        h4{
+            font-size: 22px;
+        }
+        
+        .header {
+            background-color: #1D1F21;
+            padding: 20px;
+        }
+        .nav {
+            margin: 20px 0;
+        }
+        .nav__link {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #3B4A50;
+        }
+        .section {
+            margin: 20px;
+        }
+        .section--biographie,
+        .section--galerie,
+        .section--citations,
+        .section--secret,
+        .section--contact {
+            margin: 40px 0;
+        }
+        .biographie__img{
+            width: 300px;
+            height: 300px;
+            background-color: #1D1F21;
+            display: inline-block;
+        }
+        .galerie__img {
+            width: 400px;
+            height: 400px;
+            background-color: #1D1F21;
+            display: inline-block;
+        }
+        .biographie__content,
+        .galerie__content {
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+            margin-left: 20px;
+        }
+        .biographie__list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .biographie__item {
+            background-color: #E94E77;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .citations__text {
+            font-size: 1.5em;
+            font-style: italic;
+        }
+        .contact__form {
+            display: inline-block;
+            text-align: left;
+        }
+        .contact__input,
+        .contact__textarea {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .contact__button {
+            padding: 10px 20px;
+        }
+        .secret {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Re-l Mayer</h1>
+        <img class="biographie__img" src="assets/portraitRei.png" alt="Re-l Mayer">
+        <figcaption>Re-l Mayer, inspecteur de la Cité Romdo</figcaption>
+    </header>
+    <nav class="nav">
+        <a class="nav__link" href="#biographie">Biographie</a>
+        <a class="nav__link" href="#galerie">Galerie</a>
+        <a class="nav__link" href="#citations">Citations</a>
+        <a class="nav__link" href="#secret">Secret</a>
+        <a class="nav__link" href="#contact">Contact</a>
+    </nav>
+    <section id="biographie" class="section section--biographie">
+        <h2>Biographie</h2>
+        <div class="biographie__content">
+            <p>Re-l Mayer est un personnage de la série animée *Ergo Proxy*. Elle est inspecteur de la Cité Romdo, une société dystopique futuriste. Sa quête pour découvrir la vérité sur les Proxys et les créatures AutoReiv la mène à remettre en question la nature de son monde et de son existence.</p>
+            <ul class="biographie__list">
+                <li class="biographie__item"><strong>Naissance :</strong> 5 avril 2035</li>
+                <li class="biographie__item"><strong>Début de carrière :</strong> 2057</li>
+                <li class="biographie__item"><strong>Découverte des Proxys :</strong> 2063</li>
+                <li class="biographie__item"><strong>Rébellion contre Romdo :</strong> 2065</li>
+                <li class="biographie__item"><strong>Disparition :</strong> Inconnue</li>
+            </ul>
+        </div>
+    </section>
+    <section id="galerie" class="section section--galerie">
+        <h2>Galerie</h2>
+        <div class="galerie__content">
+            <img class="galerie__img" src="placeholder.jpg" alt="Image 1">
+            <img class="galerie__img" src="placeholder.jpg" alt="Image 2">
+            <img class="galerie__img" src="placeholder.jpg" alt="Image 3">
+            <img class="galerie__img" src="placeholder.jpg" alt="Image 4">
+            <img class="galerie__img" src="placeholder.jpg" alt="Image 5">
+        </div>
+    </section>
+    <section id="citations" class="section section--citations">
+        <h2>Citations</h2>
+        <p class="citations__text">"La vérité est quelque chose que nous devons chercher par nous-mêmes."</p>
+        <p class="citations__text">"Le passé est une illusion, le futur une énigme."</p>
+        <p class="citations__text">"L'espoir est le carburant de notre survie."</p>
+    </section>
+    <section id="secret" class="section section--secret">
+        <h2>Secret</h2>
+        <p>Re-l Mayer est en réalité un clone du fondateur de Romdo, créé pour assurer la continuité de la cité.</p>
+    </section>
+    <button onclick="document.querySelector('.section--secret').style.display='block'">Dévoiler le secret</button>
+    <section id="contact" class="section section--contact">
+        <h2>Contact</h2>
+        <form class="contact__form">
+            <input class="contact__input" type="text" placeholder="Votre nom">
+            <input class="contact__input" type="email" placeholder="Votre email">
+            <textarea class="contact__textarea" placeholder="Votre message"></textarea>
+            <button class="contact__button" type="submit">Envoyer</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Votre Nom. Tous droits réservés. Mentions légales.</p>
+    </footer>
+</body>
+</html>
