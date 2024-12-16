@@ -1,0 +1,98 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #2E3A40;
+    color: #E94E77;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family : Rubik Burned;
+}
+
+h1 {
+    font-size: 94px;
+}
+h2{
+    font-size: 58px;
+}
+h3{
+    font-size: 36px;
+}
+h4{
+    font-size: 22px;
+}
+
+.header {
+    background-color: #1D1F21;
+    padding: 20px;
+}
+.nav {
+    margin: 20px 0;
+}
+.nav__link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #3B4A50;
+}
+.section {
+    margin: 20px;
+}
+.section--biographie,
+.section--galerie,
+.section--citations,
+.section--secret,
+.section--contact {
+    margin: 40px 0;
+}
+.biographie__img{
+    width: 300px;
+    height: 300px;
+    background-color: #1D1F21;
+    display: inline-block;
+}
+.galerie__img {
+    width: 400px;
+    height: 400px;
+    background-color: #1D1F21;
+    display: inline-block;
+}
+.biographie__content,
+.galerie__content {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin-left: 20px;
+}
+.biographie__list {
+    color: #3B4A50;
+    list-style-type: none;
+    padding: 0;
+}
+.biographie__item {
+    background-color: #E94E77;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.citations__text {
+    font-size: 1.5em;
+    font-style: italic;
+}
+.contact__form {
+    display: inline-block;
+    text-align: left;
+}
+.contact__input,
+.contact__textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+.contact__button {
+    padding: 10px 20px;
+}
+.secret {
+    display: none;
+}
