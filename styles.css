@@ -1,97 +1,161 @@
-body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #2E3A40;
-    color: #E94E77;
-}
-h1,h2,h3,h4,h5,h6{
-    font-family : Rubik Burned;
+:root {
+    --gallery-gap: 1.5em;
+    --gallery-item-border-radius: .4em;
+    --box-radius: .8em;
+    --box-hover-radius: .6rem .6rem 0 0;
+    --box-width: 320px;
+    --gallery-items-per-row: 3;
+    --box-shadow: 0 rgba(0, 0, 0, 0.12) 0px 14px 15px, 0 rgba(0, 0, 0, 0.12) 0px 14px 15px;
+    --container-margin: 3rem 0 3rem 0;
+    --box-padding: .8rem;
+    --box-margin: .8rem;
+
+    --primary-color: #4A4A4A;
+    --secondary-color: #6E6E6E;
+    --light-color: #ECEBD9;
+    --dark-color: #474027;
+
+    --background-color: #1C1C1C;
+    --font-color: #6E6E6E;
+    --link-color: #39a1e3;
+    --link-hover-color: #266b97;
 }
 
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    text-align: center;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    font-size:14px ;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Rubik Burned", system-ui;
+    font-weight: bolder;
+}
 h1 {
-    font-size: 94px;
+    font-size: 47px;
 }
 h2{
-    font-size: 58px;
+    font-size: 29px;
 }
 h3{
-    font-size: 36px;
+    font-size: 18px;
 }
 h4{
-    font-size: 22px;
+    font-size: 14px;
+}
+.header {
+    display: flex;
+    flex-shrink: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    background-color: var(--secondary-color);
+    width: var(--box-width);
+    border-bottom: 3px  var(--link-hover-color) solid;
+}
+.header__title {
+    background-color: var(--primary-color);
+    width: var(--box-width);
+    border-bottom: 3px  var(--link-hover-color) solid;
+    box-shadow: var(--box-shadow);
+}
+figcaption {
+    padding: 1.5rem;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+.header__img {
+    width: 123px;
+    border-radius: var(--box-radius);
+    margin:  var(--box-padding)
+}
+.header__nav {
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    height: 2rem;
+    width: 100%;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.header__nav__links{
+    text-decoration: none;
+    margin: var(--container-margin);
+    color: var(--background-color);
+    background-color: var(--secondary-color);
 }
 
-.header {
-    background-color: #1D1F21;
-    padding: 20px;
-}
-.nav {
-    margin: 20px 0;
-}
-.nav__link {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #3B4A50;
+.header__nav__links:hover {
+    background-color: var(--link-hover-color);
+    border-radius: var(--box-hover-radius);
+    border: var(--link-hover-color) solid 6px;
+    color: var(--background-color);
 }
 .section {
-    margin: 20px;
+    margin: var(--container-margin);
+    box-shadow: var(--box-shadow);
 }
 .section--biographie,
 .section--galerie,
 .section--citations,
 .section--secret,
 .section--contact {
-    margin: 40px 0;
-}
-.biographie__img{
-    width: 300px;
-    height: 300px;
-    background-color: #1D1F21;
-    display: inline-block;
-}
-.galerie__img {
-    width: 400px;
-    height: 400px;
-    background-color: #1D1F21;
-    display: inline-block;
+    margin: var(--box-margin)
 }
 .biographie__content,
 .galerie__content {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.biographie__img,
+.galerie__img {
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-color);
+    border-radius: var(--gallery-item-border-radius);
+    margin: var(--box-margin); 
 }
 .biographie__list {
-    color: #3B4A50;
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 .biographie__item {
-    background-color: #E94E77;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
+    background-color: var(--light-color);
+    padding: var(--box-padding);
+    margin: var(--box-margin) ;
+    border-radius: var(--box-radius);
 }
 .citations__text {
     font-size: 1.5em;
     font-style: italic;
+    color: var(--link-color)
 }
 .contact__form {
-    display: inline-block;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contact__input,
 .contact__textarea {
-    display: block;
     width: 100%;
-    margin: 10px 0;
-    padding: 10px;
+    max-width: 400px;
+    margin: var(--box-margin);
+    padding: var(--box-padding);
 }
 .contact__button {
-    padding: 10px 20px;
+    padding: var(--box-padding);
+    background-color: var(--link-hover-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: var(--box-radius);
 }
 .secret {
     display: none;
