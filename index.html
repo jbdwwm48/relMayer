@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <h1 class="header__title">Re-l Mayer</h1>
-        <img class="header__img" src="assets/images/portraitRel.png" alt="Re-l Mayer">
+        <img class="header__img" src="assets/images/bannerRel.jpg" alt="Re-l Mayer">
         <figcaption>Re-l Mayer, inspecteur de la Cité Romdo</figcaption>
         <nav class="header__nav">
             <a class="header__nav__links" href="#biographie">Biographie</a>
@@ -25,9 +25,11 @@
     </header>
 
     <section id="biographie" class="section section--biographie">
-        <h2>Biographie</h2>
+        <h2 class="biographie__header "">Biographie</h2>
         <div class="biographie__content">
-            <p>Re-l Mayer est un personnage de la série animée *Ergo Proxy*. Elle est inspecteur de la Cité Romdo, une société dystopique futuriste. Sa quête pour découvrir la vérité sur les Proxys et les créatures AutoReiv la mène à remettre en question la nature de son monde et de son existence.</p>
+            <p><strong>Re-l Mayer</strong> est l'héroïne de la série animée japonaise d'anticipation post-apocalyptique <strong>Ergo Proxy</strong>. Petite-fille du maire de Romdo, une ville futuriste sous dôme, elle protège les survivants d'un virus extérieur.</p>
+            <p>À 19 ans, elle est inspectrice au bureau de sécurité de Romdo, accompagnée de son robot Autoreiv <em>(robot)</em>, Iggy. Sarcastique et intuitive. Elle est également très observatrice et axée sur les détails, ce qui fait d'elle une excellente enquêtrice. Re-l travaille souvent seule, suivant son instinct. Elle a un faible pour Pino, un autre Autoreiv.</p>
+            <p>Décrite comme une ISTJ <em>(Introvert, Sensing, Thinking, Judging)</em> mais loyaliste, elle est fidèle à l'autorité mais méfiante envers l'inconnu. Son enquête sur les Proxies la mène à découvrir des vérités troublantes sur la société et son passé.</p>
             <ul class="biographie__list">
                 <li class="biographie__item"><strong>Naissance :</strong> 5 avril 2035</li>
                 <li class="biographie__item"><strong>Début de carrière :</strong> 2057</li>
@@ -38,7 +40,7 @@
         </div>
     </section>
     <section id="galerie" class="section section--galerie">
-        <h2>Galerie</h2>
+        <h2 class="galerie__header">Galerie</h2>
         <div class="galerie__content">
             <img class="galerie__img" src="assets/images/portraitrel.png" alt="Image 1">
             <img class="galerie__img" src="assets/images/portraitrel.png" alt="Image 2">
@@ -48,18 +50,21 @@
         </div>
     </section>
     <section id="citations" class="section section--citations">
-        <h2>Citations</h2>
-        <p class="citations__text">"La vérité est quelque chose que nous devons chercher par nous-mêmes."</p>
-        <p class="citations__text">"Le passé est une illusion, le futur une énigme."</p>
-        <p class="citations__text">"L'espoir est le carburant de notre survie."</p>
+        <h2 class="citations__header">Citations</h2>
+        <ul class="citations__list">
+            <li class="citations__item">"L'espoir est le carburant de notre survie."</li>
+            <li class="citations__item">"Le passé est une illusion, le futur une énigme."</li>
+            <li class="citations__item">"L'espoir est le carburant de notre survie."</li>
+        </ul>
     </section>
-    <section id="secret" class="section section--secret">
+    <!-- <section id="secret" class="section section--secret">
         <h2>Secret</h2>
         <p>Re-l Mayer est en réalité un clone du fondateur de Romdo, créé pour assurer la continuité de la cité.</p>
-    </section>
-    <button onclick="document.querySelector('.section--secret').style.display='block'">Dévoiler le secret</button>
+    </section> -->
+    <!-- <button onclick="document.querySelector('.section--secret').style.display='block'">Dévoiler le secret</button> -->
     <section id="contact" class="section section--contact">
-        <h2>Contact</h2>
+        <h2 class="contact__header">Contact</h2>
+        <p class="contact__text">Entrez en contact avec Re-l et ralliez-vous à sa cause. <br> Ensemble, nous briserons les chaînes du passé et forgerons un avenir libre.</p>
         <form class="contact__form">
             <input class="contact__input" type="text" placeholder="Votre nom">
             <input class="contact__input" type="email" placeholder="Votre email">
@@ -67,8 +72,8 @@
             <button class="contact__button" type="submit">Envoyer</button>
         </form>
     </section>
-    <footer>
-        <p>&copy; 2024 Votre Nom. Tous droits réservés. Mentions légales.</p>
+    <footer class="footer__container">
+        <p>&copy; 2024 Re-L Mayer. Ergo-Proxy. AutoReiv.<br>No Rights Allowed.</p>
     </footer>
 </body>
 </html>
