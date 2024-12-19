@@ -1,20 +1,19 @@
 :root {
+    /* mise en forme */
     --gallery-gap: 1.5em;
     --gallery-item-border-radius: .4em;
     --gallery-margin: .8rem 0 .8rem 0;
     --box-radius: .8em;
-    --box-hover-radius: .6rem .6rem 0 0;
+    --link-radius-hover: .8rem .8rem 0 0;
     --box-width: 320px;
-    --gallery-items-per-row: 3;
-    --box-shadow: 0 rgba(0, 0, 0, 0.12) 0px 14px 15px, 0 rgba(0, 0, 0, 0.12) 0px 14px 15px;
+    --form-width: 50%;
     --box-padding: .8rem;
     --box-margin: .8rem;
-
+    /* color panel  */
     --primary-color: #4A4A4A;
     --secondary-color: #6E6E6E;
     --light-color: #ECEBD9;
     --dark-color: #474027;
-
     --background-color: #1C1C1C;
     --font-color: #bababa;
     --font-color-dark: #444444;
@@ -23,9 +22,6 @@
 }
 * {
     margin: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    right: 0;
     overflow-x: hidden;
 }
 ul {
@@ -45,7 +41,6 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
-
 h1,h2,h3,h4,h5,h6 {
     font-family: "Rubik Burned", system-ui;
     font-weight: bolder;
@@ -79,6 +74,7 @@ h4{
     border-bottom: var(--link-hover-color) 3px Solid;
     padding-top: 1rem;
     margin-top: 0;
+    margin-bottom: 0;
 }
 figcaption {
     padding: .75rem;
@@ -104,18 +100,20 @@ figcaption {
     flex-direction: row;
     align-content: center;
     flex-wrap: wrap;
+    height: 2.2rem;
     border-bottom: var(--background-color) 3px Solid;
 }
 .header__nav__links {
     text-decoration: none;
     color:var(--background-color);
     border-radius: 4px; 
+    height: 2.5rem;
     border: .5rem solid transparent; 
     transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-radius 0.4s ease-in-out, border 0.4s ease-in-out; 
 }
 .header__nav__links:hover {
     background-color: var(--link-hover-color);
-    border-radius: var(--box-hover-radius);
+    border-radius: var(--link-radius-hover);
     border: var(--link-hover-color) solid .55rem;
     color: var(--background-color);
 }
@@ -127,7 +125,9 @@ figcaption {
 .section--peripeties,
 .section--citations,
 .section--secret,
-.section--contact {
+.section--contact,
+.secret__container,
+.secret {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -136,10 +136,14 @@ figcaption {
     margin: auto;
     background-color: var(--primary-color);
 }
-.peripeties__left p,
 .biographie__content p {
     text-align: justify;
     margin: var(--box-margin);
+    padding: var(--box-padding);
+}
+.peripeties__left p {
+    text-align: justify;
+    margin-left: 3rem;
     padding: var(--box-padding);
 }
 .biographie__content,
@@ -156,14 +160,15 @@ figcaption {
     width: var(--box-width);
     background-color: var(--primary-color);
 }
-.biographie__header{
+.biographie__title{
     margin-top: 0;
 }
-.biographie__header,
-.galerie__header,
-.peripeties__header,
-.citations__header,
-.contact__header {
+.biographie__title,
+.galerie__title,
+.peripeties__title,
+.citations__title,
+.contact__title,
+.secret__title {
     background-color: var(--secondary-color);
     width: var(--box-width);
     border-bottom: var(--background-color) 3px Solid;
@@ -174,11 +179,19 @@ figcaption {
 }
 .biographie__img,
 .galerie__img {
-    width: 55%;
     background-color: var(--primary-color);
     border-radius: var(--gallery-item-border-radius);
     transition: transform 0.6s ease-in-out;
     margin: .5rem 0 .5rem 0;
+}
+.biographie__img {
+    width: 50%;
+}
+.galerie__img {
+    object-fit:  cover;
+    width: 230px;
+    height: 230px;
+        cursor: pointer;
 }
 .biographie__list {
     list-style-type: none;
@@ -245,11 +258,30 @@ figcaption {
     color: var(--light-color);
     font-weight: bold;
     border: none;
+    width: 90%;
     border-radius: var(--box-radius);
     margin: .5rem .5rem 1rem .5rem;
+    cursor: pointer;
 }
 .secret {
     display: none;
+}
+.secret__button {
+    padding: var(--box-padding);
+    background-color: var(--link-hover-color);
+    color: var(--light-color);
+    font-weight: bold;
+    border: none;
+    width: 25%;
+    border-radius: var(--box-radius);
+    margin: .5rem .5rem 1rem .5rem;
+
+}
+.secret__button:hover {
+    background-color: var(--link-hover-color);
+    border-radius: var(--box-radius);
+    border: var(--light-color) solid .2rem;
+    cursor: pointer;
 }
 .footer__container {
     top: 0;
@@ -264,14 +296,56 @@ figcaption {
     padding: var(--box-padding);
     padding-bottom: 1.5rem;
     border-top: var(--link-hover-color) 3px Solid;
+}
 
+/* Lightbox */
+
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(28, 28, 28, .8);
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    padding: 3px;
+    background-color: var(--font-color);
+    border: 6px solid var(--link-hover-color);
+    border-radius: var(--gallery-item-border-radius);
+}
+
+.button__close {
+    position: absolute;
+    top: 25px;
+    bottom: 25px;
+    background-color: var(--background-color);
+    color:var(--link-color);
+    border: 1px solid var(--light-color);
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Rubik Burned", system-ui;
+}
+
+.button__close {
+    background: var(--link-hover-color);
 }
 
 /* Responsive */
 
 /* Tablettes */
 
-@media (768px <= width <= 1366px) {
+@media (min-width: 768px) and (max-width: 1366px) {
 :root {
     --box-width: 768px;
     --box-padding: .8rem;
@@ -294,13 +368,15 @@ h4{
     font-size: 22px;
 }
 .header__nav {
-    height: 2.2rem;
+    height: 2.4rem;
 }
-.biographie__header,
-.galerie__header,
-.peripeties__header,
-.citations__header,
-.contact__header {
+
+.biographie__title,
+.galerie__title,
+.peripeties__title,
+.citations__title,
+.contact__title,
+.secret__title {
     background-color: var(--secondary-color);
     width: var(--box-width);
     border-bottom: var(--background-color) 5px Solid;
@@ -366,11 +442,15 @@ h3{
 h4{
     font-size: 28px;
 }
-.biographie__header,
-.galerie__header,
-.peripeties__header,
-.citations__header,
-.contact__header {
+.header__nav {
+    height: 2.5rem;
+}
+.biographie__title,
+.galerie__title,
+.peripeties__title,
+.citations__title,
+.contact__title,
+.secret__title {
     background-color: var(--secondary-color);
     width: var(--box-width);
     border-bottom: var(--background-color) 7px Solid;
@@ -402,7 +482,10 @@ h4{
     width: 61%;
     flex-direction: row;
 }
-.peripeties__list ,
+.peripeties__left p{
+    margin-left: 2rem;
+}
+.peripeties__list,
 .biographie__list {
     display: flex;
     flex-wrap: wrap; 
@@ -421,5 +504,12 @@ h4{
     width: 25%;
     box-sizing: border-box;
     margin: 1rem .5rem 1rem .5rem;
+}
+.contact__text {
+    font-size: 36px;
+    text-align: center;
+}
+.contact__form{
+    width: var(--form-width);
 }
 }

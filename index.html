@@ -24,75 +24,84 @@
         </nav>
     </header>
 
-    <section id="biographie" class="section section--biographie">
-        <h2 class="biographie__header">Biographie</h2>
-        <div class="biographie__container__img">
-            <img src="assets/images/portraitRel.png" alt="Portrait Re-L" class="biographie__img">
-        </div>
-        <div class="biographie__content">
-            <p><strong>Re-l Mayer</strong> est l'héroïne de la série animée japonaise d'anticipation post-apocalyptique <strong>Ergo Proxy</strong>. Petite-fille du maire de Romdo, une ville futuriste sous dôme, elle protège les survivants d'un virus extérieur.</p>
-            <p>À 19 ans, elle est inspectrice au bureau de sécurité de Romdo, accompagnée de son robot Autoreiv <em>(robot)</em>, Iggy. Sarcastique et intuitive. Elle est également très observatrice et axée sur les détails, ce qui fait d'elle une excellente enquêtrice. Re-l travaille souvent seule, suivant son instinct. Elle a un faible pour Pino, un autre Autoreiv.</p>
-            <p>Décrite comme une ISTJ <em>(Introvert, Sensing, Thinking, Judging)</em> mais loyaliste, elle est fidèle à l'autorité mais méfiante envers l'inconnu. Son enquête sur les Proxies la mène à découvrir des vérités troublantes sur la société et son passé.</p>
-            <ul class="biographie__list">
-                <li class="biographie__item"><strong>5 avril 2035:</strong> Naissance</li>
-                <li class="biographie__item"><strong>2057:</strong> Début de carrière</li>
-                <li class="biographie__item"><strong>2063:</strong> Découverte des Proxys</li>
-                <li class="biographie__item"><strong>2065:</strong> Rébellion contre Romdo</li>
-                <li class="biographie__item"><strong>Inconnue :</strong> Disparition</li>
+    <main>
+        <section id="biographie" class="section section--biographie">
+            <h2 class="biographie__title">Biographie</h2>
+            <div class="biographie__container__img">
+                <img src="assets/images/portraitRel.png" alt="Portrait Re-L" class="biographie__img">
+            </div>
+            <div class="biographie__content">
+                <p><strong>Re-l Mayer</strong> est l'héroïne de la série animée japonaise d'anticipation post-apocalyptique <strong>Ergo Proxy</strong>. Petite-fille du maire de Romdo, une ville futuriste sous dôme, elle protège les survivants d'un virus extérieur.</p>
+                <p>À 19 ans, elle est inspectrice au bureau de sécurité de Romdo, accompagnée de son Autoreiv <em>(robot)</em>, Iggy. Sarcastique et intuitive. Elle est également très observatrice et axée sur les détails, ce qui fait d'elle une excellente enquêtrice. Re-l travaille souvent seule, suivant son instinct. Elle a un faible pour Pino, un autre Autoreiv.</p>
+                <p>Décrite comme une ISTJ <em>(Introvert, Sensing, Thinking, Judging)</em> mais loyaliste, elle est fidèle à l'autorité mais méfiante envers l'inconnu. Son enquête sur les Proxies la mène à découvrir des vérités troublantes sur la société et son passé.</p>
+                <ul class="biographie__list">
+                    <li class="biographie__item"><strong>5 avril 2035:</strong> Naissance</li>
+                    <li class="biographie__item"><strong>2057:</strong> Début de carrière</li>
+                    <li class="biographie__item"><strong>2063:</strong> Découverte des Proxys</li>
+                    <li class="biographie__item"><strong>2065:</strong> Rébellion contre Romdo</li>
+                    <li class="biographie__item"><strong>Inconnue :</strong> Disparition</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="galerie" class="section section--galerie">
+            <h2 class="galerie__title">Galerie</h2>
+            <div class="galerie__content">
+                <img class="galerie__img" src="assets/images/rel1.jpg" alt="Image de Re-l">
+                <img class="galerie__img" src="assets/images/rel4.jpg" alt="Image de Re-l">
+                <img class="galerie__img" src="assets/images/rel2.jpg" alt="Image de Re-l">
+                <img class="galerie__img" src="assets/images/rel6.jpg" alt="Image de Re-l">
+                <img class="galerie__img" src="assets/images/rel5.jpg" alt="Image de Proxy One">
+                <img class="galerie__img" src="assets/images/rel3.jpg" alt="Image de Re-l">
+            </div>
+        </section>
+
+        <section id="peripeties" class="section section--peripeties">
+            <div class="peripeties__left">
+                <h2 class="peripeties__title">Péripéties</h2>
+                <p>Quelques éripéties marquantes qui arrivent a Re-L Mayer lors de l'anime Ergo-Proxy</p>
+            </div>
+            <div class="peripeties__right">
+                <ul class="peripeties__list">
+                    <li class="peripeties__item">Attaque des AutoReivs infectés</li>
+                    <li class="peripeties__item">Rencontre avec un Proxy</li>
+                    <li class="peripeties__item">Voyage en dehors de Romdeau</li>
+                    <li class="peripeties__item">Découverte d'une ville abandonnée</li>
+                    <li class="peripeties__item">Affrontement final</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="citations" class="section section--citations">
+            <h2 class="citations__title">Citations</h2>
+            <ul class="citations__list">
+                <li class="citations__item">"L'humanité a toujours trouvé des excuses pour échapper à ses responsabilités.."</li>
+                <li class="citations__item">"La vérité n'a pas de sens si elle ne peut pas être partagée."</li>
+                <li class="citations__item">"L'espoir est le carburant de notre survie."</li>
             </ul>
+        </section>
+
+        <div class="secret__container">
+            <button class="secret__button" onclick="displaySecret()">Le secret de Re-l </button>
+            <section id="secret" class="secret">
+                <h2 class="secret__title">Son Secret</h2>
+                <p> Re-l Mayer est en réalité un clone du fondateur de Romdo, créé pour assurer la continuité de la cité.</p>
+            </section>
         </div>
-    </section>
-    <section id="galerie" class="section section--galerie">
-        <h2 class="galerie__header">Galerie</h2>
-        <div class="galerie__content">
-            <img class="galerie__img" src="assets/images/portraitrel.png" alt="Image 1">
-            <img class="galerie__img" src="assets/images/portraitrel.png" alt="Image 2">
-            <img class="galerie__img" src="assets/images/portraitrel.png" alt="Image 3">
-            <img class="galerie__img" src="assets/images/portraitrel.png" alt="Image 4">
-            <img class="galerie__img" src="assets/images/portraitrel.png" alt="Image 5">
-            <img class="galerie__img" src="assets/images/portraitrel.png" alt="Image 5">
-        </div>
-    </section>
-    <section id="peripeties" class="section section--peripeties">
-        <div class="peripeties__left">
-            <h2 class="peripeties__header">Péripéties</h2>
-            <p>Quelques éripéties marquantes qui arrivent a Re-L Mayer lors de l'anime Ergo-Proxy</p>
-        </div>
-        <div class="peripeties__right">
-            <ul class="peripeties__list">
-                <li class="peripeties__item">Attaque des AutoReivs infectés</li>
-                <li class="peripeties__item">Rencontre avec un Proxy</li>
-                <li class="peripeties__item">Voyage en dehors de Romdeau</li>
-                <li class="peripeties__item">Découverte d'une ville abandonnée</li>
-                <li class="peripeties__item">Affrontement final</li>
-            </ul>
-        </div>
-    </section>
-    <section id="citations" class="section section--citations">
-        <h2 class="citations__header">Citations</h2>
-        <ul class="citations__list">
-            <li class="citations__item">"L'espoir est le carburant de notre survie."</li>
-            <li class="citations__item">"Le passé est une illusion, le futur une énigme."</li>
-            <li class="citations__item">"L'espoir est le carburant de notre survie."</li>
-        </ul>
-    </section>
-    <!-- <section id="secret" class="section section--secret">
-        <h2>Secret</h2>
-        <p>Re-l Mayer est en réalité un clone du fondateur de Romdo, créé pour assurer la continuité de la cité.</p>
-    </section> -->
-    <!-- <button onclick="document.querySelector('.section--secret').style.display='block'">Dévoiler le secret</button> -->
-    <section id="contact" class="section section--contact">
-        <h2 class="contact__header">Contact</h2>
-        <p class="contact__text">Entrez en contact avec Re-l et ralliez-vous à sa cause. <br> Ensemble, nous briserons les chaînes du passé et forgerons un avenir libre.</p>
-        <form class="contact__form">
-            <input class="contact__input" type="text" placeholder="Votre nom">
-            <input class="contact__input" type="email" placeholder="Votre email">
-            <textarea class="contact__textarea" placeholder="Votre message"></textarea>
-            <button class="contact__button" type="submit">Envoyer</button>
-        </form>
-    </section>
-    <footer class="footer__container">
-        <p>&copy; 2024 Re-L Mayer. AutoReiv. Ergo-Proxy.<br>No Rights Allowed.</p>
-    </footer>
+        <section id="contact" class="section section--contact">
+            <h2 class="contact__title">Contact</h2>
+            <p class="contact__text">Entrez en contact avec Re-l et ralliez-vous à sa cause.</p>
+            <form class="contact__form">
+                <input class="contact__input" type="text" placeholder="Votre nom">
+                <input class="contact__input" type="email" placeholder="Votre email">
+                <textarea class="contact__textarea" placeholder="Votre message"></textarea>
+                <button class="contact__button" type="submit">Envoyer</button>
+            </form>
+        </section>
+        <footer class="footer__container">
+            <p>&copy; 2024 Re-L Mayer. AutoReiv. Ergo-Proxy.<br>No Rights Allowed.</p>
+        </footer>
+        <script src="javaScript.js"></script>
+    </main>
 </body>
 </html>
