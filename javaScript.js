@@ -38,6 +38,6 @@ lightbox.addEventListener('click', e => {
         lightbox.classList.remove('active');
 })
 
-closeButton.addEventLinstener('click', () => {
+closeButton.addEventListener('click', () => {
     lightbox.classList.remove('active');
 })
