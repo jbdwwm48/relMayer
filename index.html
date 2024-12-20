@@ -14,25 +14,27 @@
     <header class="header">
         <h1 class="header__title">Re-l Mayer</h1>
         <img class="header__img" src="assets/images/bannerRel.jpg" alt="Re-l Mayer">
-        <figcaption>Re-l Mayer, inspecteur de la Cité Romdo</figcaption>
+        <p class="header__caption">Re-l Mayer, inspecteur de la Cité Romdo</p>
         <nav class="header__nav">
             <a class="header__nav__links" href="#biographie">Biographie</a>
+            <a class="header__nav__links" href="#influences">Influences</a>
             <a class="header__nav__links" href="#galerie">Galerie</a>
             <a class="header__nav__links" href="#citations">Citations</a>
-            <a class="header__nav__links" href="#secret__anchor">Secret</a>
             <a class="header__nav__links" href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
+
         <section id="biographie" class="section section--biographie">
             <h2 class="biographie__title">Biographie</h2>
             <div class="biographie__container__img">
                 <img src="assets/images/portraitRel.png" alt="Portrait Re-L" class="biographie__img">
             </div>
             <div class="biographie__content">
-                <p><strong>Re-l Mayer</strong> est l'héroïne de la série animée japonaise d'anticipation post-apocalyptique <strong>Ergo Proxy</strong>. Petite-fille du maire de Romdo, une ville futuriste sous dôme, elle protège les survivants d'un virus extérieur.</p>
-                <p>À 19 ans, elle est inspectrice au bureau de sécurité de Romdo, accompagnée de son Autoreiv <em>(robot)</em>, Iggy. Sarcastique et intuitive. Elle est également très observatrice et axée sur les détails, ce qui fait d'elle une excellente enquêtrice. Re-l travaille souvent seule, suivant son instinct. Elle a un faible pour Pino, un autre Autoreiv.</p>
+                <p><strong>Re-l Mayer</strong> est l'héroïne de la série animée japonaise d'anticipation post-apocalyptique <strong>Ergo Proxy</strong>. Petite-fille du maire de Romdo, une ville futuriste sous dôme, elle protège les survivants d'un virus extérieur. Le virus <strong>Cogito</strong></p>
+                <p>Le virus <strong>Cogito</strong> dans Ergo Proxy entraîne une prise de conscience chez les AutoReivs, rappelant le célèbre "Cogito, ergo sum" de Descartes. Cette analogie souligne le thème de la conscience et de l'identité, où la pensée et la conscience de soi définissent l'existence même, tout comme le philosophe l'a décrit.</p>
+                <p>À 19 ans, elle est inspectrice au bureau de sécurité de Romdo, accompagnée de son AutoReiv <em>(robot)</em>, Iggy. Sarcastique et intuitive. Elle est également très observatrice et axée sur les détails, ce qui fait d'elle une excellente enquêtrice. Re-l travaille souvent seule, suivant son instinct. Elle a un faible pour Pino, un autre Autoreiv.</p>
                 <p>Décrite comme une ISTJ <em>(Introvert, Sensing, Thinking, Judging)</em> mais loyaliste, elle est fidèle à l'autorité mais méfiante envers l'inconnu. Son enquête sur les Proxies la mène à découvrir des vérités troublantes sur la société et son passé.</p>
                 <ul class="biographie__list">
                     <li class="biographie__item"><strong>5 avril 2035:</strong> Naissance</li>
@@ -41,6 +43,26 @@
                     <li class="biographie__item"><strong>2065:</strong> Rébellion contre Romdo</li>
                     <li class="biographie__item"><strong>Inconnue :</strong> Disparition</li>
                 </ul>
+                <div id="countdown" class="biographie__countdown">
+                <!-- display result daysUntilDate(targetDate)  -->
+                </div>
+            </div>
+        </section>
+
+        <section id="influences" class="section section--influences">
+            <div class="influences__left">
+                <h2 class="influences__title">Influences</h2>
+                <p>L'œuvre de japanimation Ergo Proxy est à la fois influencée par et influençant dans divers domaines.</p>
+            </div>
+            <div class="influences__right">
+                <ul class="influences__list">
+                    <li class="influences__item"><strong>Philosophie:</strong> <br> René Descartes, Friedrich NIetzsche, Jean-Paul Sartre</li>
+                    <li class="influences__item"><strong>Littérature:</strong> <br> Aldous Huxley, George Orwell</li>
+                    <li class="influences__item"><strong>Cinéma:</strong> <br> Blade Runner (1982), Ghost in the Shell, Akira</li>
+                    <li class="influences__item"><strong>Jeux Vidéo postérieurs:</strong> <br> Nier: Automata, Bioshock Series, Deus Ex Series</li>
+                    <li class="influences__item"><strong>Manga et anime postérieurs:</strong> <br>Psycho-Pass,Attack on Titan, Cyberpunk: Edgerunners</li>
+                </ul>
+                <p>Ces œuvres montrent comment Ergo Proxy a su laisser une empreinte significative et inspirer de nombreuses autres créations à travers différents médias.</p>
             </div>
         </section>
 
@@ -53,22 +75,6 @@
                 <img class="galerie__img" src="assets/images/rel6.jpg" alt="Image de Re-l">
                 <img class="galerie__img" src="assets/images/rel5.jpg" alt="Image de Proxy One">
                 <img class="galerie__img" src="assets/images/rel3.jpg" alt="Image de Re-l">
-            </div>
-        </section>
-
-        <section id="peripeties" class="section section--peripeties">
-            <div class="peripeties__left">
-                <h2 class="peripeties__title">Péripéties</h2>
-                <p>Quelques éripéties marquantes qui arrivent a Re-L Mayer lors de l'anime Ergo-Proxy</p>
-            </div>
-            <div class="peripeties__right">
-                <ul class="peripeties__list">
-                    <li class="peripeties__item">Attaque des AutoReivs infectés</li>
-                    <li class="peripeties__item">Rencontre avec un Proxy</li>
-                    <li class="peripeties__item">Voyage en dehors de Romdeau</li>
-                    <li class="peripeties__item">Découverte d'une ville abandonnée</li>
-                    <li class="peripeties__item">Affrontement final</li>
-                </ul>
             </div>
         </section>
 
@@ -91,17 +97,21 @@
         <section id="contact" class="section section--contact">
             <h2 class="contact__title">Contact</h2>
             <p class="contact__text">Entrez en contact avec Re-l et ralliez-vous à sa cause.</p>
-            <form class="contact__form">
-                <input class="contact__input" type="text" placeholder="Votre nom">
-                <input class="contact__input" type="email" placeholder="Votre email">
-                <textarea class="contact__textarea" placeholder="Votre message"></textarea>
-                <button class="contact__button" type="submit">Envoyer</button>
+            <form id="contactForm" class="contact__form" action="/submit" method="post">
+                <input id="formName" class="contact__input" type="text" placeholder="Votre nom">
+                <input id="formMail" class="contact__input" type="email" placeholder="Votre email">
+                <textarea id="formTextArea" class="contact__textarea" placeholder="Votre message"></textarea>
+                <button class="contact__button" type="submit" >Envoyer</button>
             </form>
         </section>
-        <footer class="footer__container">
-            <p>&copy; 2024 Re-L Mayer. AutoReiv. Ergo-Proxy.<br>No Rights Allowed.</p>
-        </footer>
-        <script src="javaScript.js"></script>
+
     </main>
+
+    <footer class="footer__container">
+        <p>&copy; 2024 Re-L Mayer. AutoReiv. Ergo-Proxy.<br>No Rights Allowed.</p>
+    </footer>
+
+    <script src="javaScript.js"></script>
+    
 </body>
 </html>

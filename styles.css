@@ -76,7 +76,7 @@ h4{
     margin-top: 0;
     margin-bottom: 0;
 }
-figcaption {
+.header__caption {
     padding: .75rem;
     font-weight: bold;
     font-size: 29px;
@@ -122,7 +122,7 @@ figcaption {
 }
 .section--biographie,
 .section--galerie,
-.section--peripeties,
+.section--influences,
 .section--citations,
 .section--secret,
 .section--contact,
@@ -139,11 +139,11 @@ figcaption {
 .biographie__content p {
     text-align: justify;
     margin: var(--box-margin);
-    padding: var(--box-padding);
+    padding: -.5rem .5rem -.5rem .5rem;
 }
-.peripeties__left p {
+.influences__left p,
+.influences__right p {
     text-align: justify;
-    margin-left: 3rem;
     padding: var(--box-padding);
 }
 .biographie__content,
@@ -165,7 +165,7 @@ figcaption {
 }
 .biographie__title,
 .galerie__title,
-.peripeties__title,
+.influences__title,
 .citations__title,
 .contact__title,
 .secret__title {
@@ -198,6 +198,11 @@ figcaption {
     padding: 0;
     margin: 0;
 }
+.biographie__countdown {
+    padding: var(--box-padding);
+    margin-top: 1rem;
+    font-weight: bolder;
+}
 .biographie__item {
     background-color:var(--font-color);
     color: var(--font-color-dark);
@@ -207,19 +212,18 @@ figcaption {
     justify-content: space-around;
 }
 .galerie__img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(2.5deg);
 }
-.peripeties__right {
+.influences__right {
     margin: var(--box-margin);
 }
-.peripeties__item{
+.influences__item{
     background-color:var(--font-color);
     color: var(--font-color-dark);
     padding: var(--box-padding);
     margin: var(--box-margin) ;
     border-radius: var(--box-radius);
     justify-content: space-around;
-    font-weight: bolder;
 }
 .citations__list {
     margin-bottom: 1rem;
@@ -373,7 +377,7 @@ h4{
 
 .biographie__title,
 .galerie__title,
-.peripeties__title,
+.influences__title,
 .citations__title,
 .contact__title,
 .secret__title {
@@ -402,13 +406,20 @@ h4{
     width: 61%;
     flex-direction: row;
 }
-.peripeties__list,
+.influences__left p,
+.influences__right p {
+    text-align: justify;
+    margin-left: 3rem;
+    padding: var(--box-padding);
+}
+.influences__list,
 .biographie__list {
     display: flex;
     flex-wrap: wrap; 
+    align-self: center;
     width: 100%;
 }
-.peripeties__item,
+.influences__item,
 .biographie__item {
     padding: .4rem .6rem .4rem .6rem; 
     width: 40%;
@@ -447,7 +458,7 @@ h4{
 }
 .biographie__title,
 .galerie__title,
-.peripeties__title,
+.influences__title,
 .citations__title,
 .contact__title,
 .secret__title {
@@ -482,22 +493,25 @@ h4{
     width: 61%;
     flex-direction: row;
 }
-.peripeties__left p{
-    margin-left: 2rem;
+.influences__left p,
+.influences__right p {
+    text-align: justify;
+    margin-left: 3rem;
+    padding: var(--box-padding);
 }
-.peripeties__list,
+.influences__list,
 .biographie__list {
     display: flex;
     flex-wrap: wrap; 
     width: 100%;
 }
-.peripeties__item,
+.influences__item,
 .biographie__item {
     margin-left: 2rem;
     padding: .4rem .6rem .4rem .6rem; 
     width: 40%;
 }
-.peripeties__item {
+.influences__item {
     width: 28%;
 }
 .galerie__img {
