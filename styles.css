@@ -126,6 +126,7 @@ h4{
 .section--citations,
 .section--secret,
 .section--contact,
+.section--secret,
 .secret__container,
 .secret {
     display: flex;
@@ -518,6 +519,9 @@ h4{
     width: 25%;
     box-sizing: border-box;
     margin: 1rem .5rem 1rem .5rem;
+}
+.secret__texte {
+    margin: 0px 100px 0px 100px 0px;
 }
 .contact__text {
     font-size: 36px;
